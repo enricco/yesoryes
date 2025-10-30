@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import illustration from './assets/illustration.png';
 
-const PLAYLIST_URL = 'https://music.youtube.com/watch?v=dQw4w9WgXcQ';
+const PLAYLIST_URL = 'https://music.youtube.com/watch?v=0e7uplpFJdE&si=tQnilL9XyyiRI97B';
 
 const pencilCursor =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 42 42'%3E%3Cpath fill='%2350473f' d='M3.2 30.9 1 41l10.3-2.4L38.7 11c1.6-1.6 1.6-4.2 0-5.9L33 -0.6c-1.6-1.6-4.2-1.6-5.9 0L3.2 30.9Zm4.4 5.5-2.2.5.5-2.2 2.9 1.7-1.2.3Zm-1.2-4.1 22-22 5.3 5.3-22 22-5.3-5.3Zm26.2-23.6-5.3-5.3 2.2-2.2c.4-.4 1.1-.4 1.5 0l3.8 3.7c.4.4.4 1.1 0 1.5l-2.2 2.3Z'/%3E%3C/svg%3E";
@@ -447,25 +448,27 @@ function App() {
       <div className="noise-overlay" />
 
       <header
-        className="sticky top-0 z-40 mx-auto flex w-full max-w-5xl justify-center bg-[#f6f0e6]/80 px-5 py-4 backdrop-blur-md"
+        className="sticky top-0 z-40 w-full bg-[#f6f0e6]/80 px-5 py-4 backdrop-blur-md"
         style={{ cursor: `url(${pencilCursor}), auto` }}
       >
-        <motion.div
-          className="relative flex items-center gap-3 rounded-full border border-graphite/10 bg-white/85 px-6 py-3 shadow-sm"
-          initial={{ opacity: 0, y: -12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: [0.22, 0.44, 0.36, 1] }}
-        >
-          <span className="font-hand text-xl text-ink sm:text-2xl">dear jessica 💌</span>
-          <span className="hidden text-[11px] uppercase tracking-[0.3em] text-graphite/60 sm:block">
-            special for you
-          </span>
-          <Scribble
-            variant="underline"
-            color="#e9a9b2"
-            className="absolute -bottom-4 left-6 h-8 w-32 opacity-70"
-          />
-        </motion.div>
+        <div className="mx-auto flex w-full max-w-5xl justify-center">
+          <motion.div
+            className="relative flex items-center gap-3 rounded-full border border-graphite/10 bg-white/85 px-6 py-3 shadow-sm"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 0.44, 0.36, 1] }}
+          >
+            <span className="font-hand text-xl text-ink sm:text-2xl">dear jessica 💌</span>
+            <span className="hidden text-[11px] uppercase tracking-[0.3em] text-graphite/60 sm:block">
+              special gift for you
+            </span>
+            <Scribble
+              variant="underline"
+              color="#e9a9b2"
+              className="absolute -bottom-4 left-6 h-8 w-32 opacity-70"
+            />
+          </motion.div>
+        </div>
       </header>
 
       <main className="mx-auto mt-12 flex w-full max-w-5xl flex-col gap-16 px-5 sm:px-8">
@@ -486,23 +489,50 @@ function App() {
             copy<br />for Jessica
           </div>
 
-          <motion.h1
-            className="font-hand text-6xl leading-[1.08] text-ink sm:text-7xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05, duration: 0.6 }}
-          >
-            dear jessica ✨
-          </motion.h1>
-          <div className="mt-3 h-6 w-32">
-            <Scribble variant="underline" color="#f4b7c6" className="h-full w-full" />
+          <div className="grid gap-10 sm:grid-cols-[minmax(0,1fr)_260px] sm:items-center">
+            <div>
+              <motion.h1
+                className="font-hand text-6xl leading-[1.08] text-ink sm:text-7xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05, duration: 0.6 }}
+              >
+                dear jessica ✨
+              </motion.h1>
+              <div className="mt-3 h-6 w-32">
+                <Scribble variant="underline" color="#f4b7c6" className="h-full w-full" />
+              </div>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-graphite">
+                I wanted to tell you something special.
+              </p>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-graphite/80">
+                after knowing you for weeks and seeing you being a better person, i want to tell you a secret. please read carefully, this is my little gift for you.
+              </p>
+            </div>
+            <motion.figure
+              className="relative mx-auto w-56 max-w-[260px] sm:mx-0 sm:w-64"
+              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24, rotate: prefersReducedMotion ? 0 : 4 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
+            >
+              <span
+                className="pointer-events-none absolute -inset-3 "
+                aria-hidden
+              />
+              <img
+                src={illustration}
+                alt="Hand-drawn collage of us that sets the tone for the letter."
+                className="relative z-10 w-full "
+                loading="eager"
+              />
+              <Scribble
+                variant="loop"
+                color="#f4d9a6"
+                className="pointer-events-none absolute -bottom-6 -right-6 h-10 w-28 opacity-70"
+              />
+            </motion.figure>
           </div>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-graphite">
-            I wanted to tell you something special.
-          </p>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-graphite/80">
-            after knowing you for weeks and seeing you being a better person, i want to tell you a secret. please read carefully, this is my little gift for you.
-          </p>
         </motion.section>
 
         <section className="relative notebook-margin deckled-card px-6 py-10 sm:px-12">
