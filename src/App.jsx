@@ -9,30 +9,31 @@ const pencilCursor =
 
 const reasonEntries = [
   {
-    title: 'you heal my broken heart 💔',
-    body: 'i was lonely and broken, but you want me, you want me to be with you.',
+    title: 'you patched my cracked heart 💔',
+    body: 'was kinda lost, kinda guarded, then you chose me anyway. still stunned, still grateful.',
   },
   {
-    title: 'You are very caring 💛',
-    body: 'Your check-ins arrive like a warm hug to my day! every one makes the tough bits softer.',
+    title: 'you actually care 💛',
+    body: 'your random check-ins land like a warm hug. stress volume down, life volume up.',
   },
   {
-    title: 'Match my energy ✨',
-    body: 'i feel like we are on the same wavelength, we are always on the same page.',
+    title: 'same frequency ✨',
+    body: 'we sync fast. no posturing, no guessing. just click, then clarity.',
   },
   {
-    title: 'You love to read 📖',
-    body: 'i love someone who loves to read, it makes me feel like we are on the same page.',
+    title: 'book brain activated 📖',
+    body: 'a reader? say less. it feels like co-op mode for our brains.',
   },
   {
-    title: 'Crazy transformation 🖋️',
-    body: 'you did the right thing and changed yourself for the better, i am proud of you.',
+    title: 'real change, not talk 🖋️',
+    body: 'you picked the hard path and leveled up. respect. i’m proud of you, fr.',
   },
   {
-    title: 'Joyful energy 🎉',
-    body: 'you decorate every day with cuteness, laughs, and smiles. you always make me proud',
+    title: 'joy factory 🎉',
+    body: 'you decorate days with cute chaos and stupid little smiles. i fold every time.',
   },
 ];
+
 
 const receiptEntries = [
   {
@@ -84,31 +85,31 @@ const timelineEntries = [
     label: 'first',
     emoji: '🌱',
     title: 'bumble match',
-    body: 'Unpredictable bumble match that led to a crazy meet up.',
+    body: 'unserious swipe turned serious fast. chaos speedrun unlocked.',
   },
   {
     label: 'second',
     emoji: '☕️',
     title: 'madiun meet up',
-    body: 'crazy, so fucking crazy we had a lot of fun.',
+    body: 'unhinged fun, zero dead air, ten out of ten memories.',
   },
   {
     label: 'third',
     emoji: '🎧',
     title: 'family meet up',
-    body: 'interview from your family, but i won their hearts!',
+    body: 'mini interview arc. somehow i cleared the final boss.',
   },
   {
     label: 'fourth',
     emoji: '🏡',
-    title: 'you came to Malang',
-    body: 'yes we are here now.',
+    title: 'you came to malang',
+    body: 'new city, same spark. felt weirdly… comfortable.',
   },
   {
     label: 'fifth',
     emoji: '💍',
     title: 'the next thing',
-    body: 'Only question left is the big one. Spoiler: also yes.',
+    body: 'only one question left. spoilers: i already know your answer.',
   },
 ];
 
@@ -126,7 +127,7 @@ const futureCaptions = [
   'cozy cuddle book reads 📚',
   'future gym accountability 💪',
   'getting rich together 💼',
-  'we in hogwarts as ravenclaw 🪄',
+  'ravenclaw at hogwarts 🪄',
   'we in umamusume world 🐎',
 ];
 
@@ -503,10 +504,10 @@ function App() {
                 <Scribble variant="underline" color="#f4b7c6" className="h-full w-full" />
               </div>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-graphite">
-                I wanted to tell you something special.
+                i've been wanting to say this properly.
               </p>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-graphite/80">
-                after knowing you for weeks and seeing you being a better person, i want to tell you a secret. please read carefully, this is my little gift for you.
+                after watching you grow and choosing me back, here’s my little secret. read slow. this one matters
               </p>
             </div>
             <motion.figure
