@@ -434,9 +434,7 @@ function App() {
     fireConfetti();
     setAnswerLocked(true);
     setToastVisible(true);
-    window.setTimeout(() => {
-      window.open(PLAYLIST_URL, '_blank', 'noopener,noreferrer');
-    }, 2000);
+    window.open(PLAYLIST_URL, '_blank', 'noopener,noreferrer');
   };
 
   const answerPromptKey = answerLocked ? 'locked' : 'prompt';
