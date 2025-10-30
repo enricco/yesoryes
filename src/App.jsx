@@ -446,8 +446,6 @@ function App() {
 
   return (
     <div className="relative min-h-screen pb-24">
-      <div className="noise-overlay" />
-
       <header
         className="sticky top-0 z-40 w-full bg-[#f6f0e6]/80 px-5 py-4 backdrop-blur-md"
         style={{ cursor: `url(${pencilCursor}), auto` }}
